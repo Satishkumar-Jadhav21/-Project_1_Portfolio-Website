@@ -14,3 +14,9 @@ Projects Section: Lists various projects with brief descriptions and links for m
 Portfolio Section: Displays Satish's work with images and descriptions.
 Contact Section: Contains contact information and a form to send messages directly to Satish.
 Download CV: Option to download Satish's CV.
+
+Technologies Used
+HTML: Structure of the website.
+CSS: Styling of the website.
+JavaScript: Interactive elements and functionality.
+Font Awesome: Icons used throughout the website.
