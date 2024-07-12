@@ -20,3 +20,18 @@ HTML: Structure of the website.
 CSS: Styling of the website.
 JavaScript: Interactive elements and functionality.
 Font Awesome: Icons used throughout the website.
+
+Code Explanation
+HTML Structure
+The HTML file defines the structure of the website, including the header, about, projects, portfolio, and contact sections.
+
+CSS and JavaScript
+CSS (styles.css): This file is linked in the <head> section to style the website.
+JavaScript: The file includes JavaScript functions to handle tab navigation, menu opening/closing, and form submission.
+External Resources
+Font Awesome: Used for icons in the navigation menu, project listings, and social media links.
+Google Apps Script: Used to handle form submissions and send messages to a Google Sheet.
+JavaScript Functions
+Tab Navigation: Functions to open different tabs in the "About Me" section.
+Menu Handling: Functions to open and close the side menu.
+Form Submission: Script to handle form submissions and send the data to a Google Sheet.
