@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satish's Portfolio/About</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/sign.jpg" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html" onclick="showTab('home')">Home</a></li>
+                    <li><a href="about.html" onclick="showTab('about')">About</a></li>
+                    <li><a href="project.html" onclick="showTab('project')">My Projects</a></li>
+                    <li><a href="portfolio.html" onclick="showTab('portfolio')">Portfolio</a></li>
+                    <li><a href="contact.html" onclick="showTab('contact')">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+
+    <div id="about" class="tab-content">
+        <!-- About section content here -->
+        <div id="about">
+
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/prof.pic.jpg" alt="">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>Hello Everyone, Myself Satishkumar and I am a dedicated and enthusiastic Bachelor of Computer Applications (BCA) student with a burning passion for software development,
+                            As an engineering student with a passion for technology, I am constantly exploring new and exciting opportunities to expand my skill set.</p>
+    
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('Education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="Skills">
+                            <ul>
+                                <li><span>Skills</span><br>Java | Sql | Html/Css & js | oops | DBMS</li>
+                                <li><span>Languages</span><br>English | Hindi | Marathi | Telugu </li>
+                                <li><span>Interpersonal Skills</span><br>Teamwork | Communication</li>
+                            </ul>
+                        </div>      
+                        <div class="tab-contents" id="Experience">
+                            <ul>
+                                <li><span>Student At ADYPU</span><br>Pursuing Bachelors Degree in Computer Science At ADYPU,Pune</li>
+                                
+                            </ul>
+                        </div>    
+                        <div class="tab-contents" id="Education">
+                            <ul>
+                                <li><span>Ajeenkya DY Patil University</span><br>BCA | 2022-Present</li>
+                                <li><span>Maharashtra State Board</span><br>HSC | 2019-2020</li>
+                                <li><span>Maharashtra State Board</span><br>SSC | 2017-2018</li>
+                              
+                            </ul>
+                        </div>              
+                    </div>
+                </div>
+            </div>
+            </div>
+    
+    </div>
+    <script>
+            
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }  
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right="0";
+
+        }
+        function closemenu(){
+            sidemenu.style.right="-200px";
+
+        }
+    </script>
+
+</body>
+</html>
