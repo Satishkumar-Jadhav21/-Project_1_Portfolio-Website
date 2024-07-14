@@ -107,3 +107,22 @@ jobs:
                      echo "No files to move"
                          exit 1
                           fi
+      - name: Executing remote ssh commands using ssh key
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST_DNS }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            sudo apt-get -y update
+            sudo apt-get install -y apache2
+            sudo systemctl start apache2
+            sudo systemctl enable apache2  
+            cd ***
+               echo "Current Directory: $(pwd)"
+                echo "Listing files in current directory:"
+                 ls -al
+                 echo "Removing files in /var/www/html/"
+                  sudo rm -rf /var/www/html/*
+                  echo "Moving files to /var/www/html/"
+                  sudo mv * /var/www/html
