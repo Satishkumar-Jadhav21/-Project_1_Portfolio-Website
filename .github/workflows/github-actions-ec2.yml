@@ -68,3 +68,42 @@ jobs:
             sudo systemctl enable apache2
             cd ***
              sudo mv -f * /var/www/html
+      - name: Executing remote ssh commands using ssh key
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST_DNS }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            sudo apt-get -y update
+            sudo apt-get install -y apache2
+            sudo systemctl start apache2
+            sudo systemctl enable apache2  
+            cd ***
+              pwd
+               ls -al
+               sudo rm -rf /var/www/html/*
+               sudo mv * /var/www/html
+
+      - name: Executing remote ssh commands using ssh key
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST_DNS }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            sudo apt-get -y update
+            sudo apt-get install -y apache2
+            sudo systemctl start apache2
+            sudo systemctl enable apache2  
+            cd ***
+             echo "Current Directory: $(pwd)"
+               echo "Listing files:"
+                ls -al
+                if [ "$(ls -A *)" ]; then
+                 sudo rm -rf /var/www/html/*
+                  sudo mv * /var/www/html
+                   else
+                     echo "No files to move"
+                         exit 1
+                          fi
