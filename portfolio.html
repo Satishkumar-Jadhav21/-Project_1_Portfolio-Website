@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satish's Portfolio/Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/f9d02d5e12.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/sign.jpg" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html" onclick="showTab('home')">Home</a></li>
+                    <li><a href="about.html" onclick="showTab('about')">About</a></li>
+                    <li><a href="project.html" onclick="showTab('project')">My Projects</a></li>
+                    <li><a href="portfolio.html" onclick="showTab('portfolio')">Portfolio</a></li>
+                    <li><a href="contact.html" onclick="showTab('contact')">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+
+    <div id="portfolio" class="tab-content">
+        <!-- Portfolio section content here -->
+        <div id="portfolio">
+            <div class="container">
+                <h1 class="sub-title">My Work</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="images/work-1.png">
+                        <div class="layer">
+                            <h3>social media</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit magnam atque nesciunt sapiente itaque blanditiis est velit dicta pariatur a. Quia sed quam, aliquam alias officia quasi sit placeat aliquid?</p>
+                            <a href="#"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/work-2.png">
+                        <div class="layer">
+                            <h3>Games</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit magnam atque nesciunt sapiente itaque blanditiis est velit dicta pariatur a. Quia sed quam, aliquam alias officia quasi sit placeat aliquid?</p>
+                            <a href="#"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/work-3.png">
+                        <div class="layer">
+                            <h3>Music app</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit magnam atque nesciunt sapiente itaque blanditiis est velit dicta pariatur a. Quia sed quam, aliquam alias officia quasi sit placeat aliquid?</p>
+                            <a href="#"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn">See More</a>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
